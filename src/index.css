@@ -1,0 +1,24 @@
+/* src/index.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+    font-family: "Simple Michael Regular";
+    src: url(../fonts/Simple-Michael.otf) format('opentype');
+}
+
+@font-face {
+    font-family: "Simple Michael Italic";
+    src: url(../fonts/Simple-Michael-Italic.otf) format('opentype');
+}
+
+@font-face {
+    font-family: "Standerd Regular";
+    src: url(../fonts/Standerd-Regular.otf) format('opentype');
+}
+
+@font-face {
+    font-family: "Wasted Vindey";
+    src: url(../fonts/wasted-vindey.ttf) format('opentype');
+}
