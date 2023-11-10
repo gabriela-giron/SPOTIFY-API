@@ -7,20 +7,19 @@ const home = () => {
     // Extrae el token de acceso de la URL
     //este trae todos los datos que devuelve la URL ( )
     const hashParams = {};
-    const hash = window.location.hash.substring(1);
+    //const hash = window.location.hash.substring(1);
+    const hash = window.location.search;
     console.log(hash)
     const params = hash.split('&');
     console.log('params',params)
 
     params.forEach(param => {
-      const [key, value] = param.split('=');
+      let [key, value] = param.split('=');
+      key = key.slice(1)
       hashParams[key] = decodeURIComponent(value);
     });
 
-    if (hashParams.access_token) {
-      setAccessToken(hashParams.access_token);
-    }
-
+    setAccessToken(hashParams.access_token);
     console.log(hashParams)
     console.log('hash ', hash)
   }, []);
